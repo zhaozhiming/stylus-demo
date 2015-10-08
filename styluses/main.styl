@@ -1,17 +1,22 @@
-$bg-color = #21C187;
+$header-color = #21C187;
 $text-white-color = white;
+$text-black-color = black;
 $text-grey-color = #939393;
+$mask-color = #333333;
+$bg-grey-white-color = #EEEEEE;
+$text-title-color = #64BFA0;
+$title-line-color = #CCCCCC;
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: $text-white-color;
   text-align: center;
   width: 100%;
+  background-color: $bg-grey-white-color;
 }
 
 .nav-header {
-  background-color: $bg-color;
+  background-color: $header-color;
   text-align: left;
   position: relative;
   z-index: 1;
@@ -22,6 +27,7 @@ body {
 
     li {
       display: inline;
+      color: $text-white-color;
 
       &:hover {
         text-decoration: underline;
@@ -34,7 +40,8 @@ body {
 .logo {
   width: 100%;
   min-height: 500px;
-  background-color: #333333;
+  background-color: $mask-color;
+  color: $text-white-color;
   position: relative;
   z-index: 1;
 
@@ -67,5 +74,55 @@ body {
     line-height: 1.4;
     margin: 0 auto;
   }
+}
+
+.title {
+  margin: 0;
+  color: $text-title-color;
+
+  &:after {
+    display: block;
+    content: "";
+    border: 2px solid $title-line-color;
+    width: 5%;
+    margin: 5px auto;
+  }
+}
+
+.mean {
+  width: 100%;
+  min-height: 500px;
+
+  h2 {
+    padding: 100px 0 50px 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    float: left;
+    width: 33.3%
+    box-sizing: border-box;
+
+    i {
+      font-size: 40px;
+    }
+
+    h4 {
+      margin: 5px 0 20px 0;
+      font-weight: bold;
+    }
+
+    p {
+      color: $text-grey-color;
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+
+
 }
 
