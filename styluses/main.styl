@@ -1,11 +1,15 @@
+@import 'nib';
+
 $header-color = #21C187;
 $text-white-color = white;
 $text-black-color = black;
 $text-grey-color = #939393;
 $mask-color = #333333;
 $bg-grey-white-color = #EEEEEE;
+$bg-grey-dark-color = #DDDDDD;
 $text-title-color = #64BFA0;
 $title-line-color = #CCCCCC;
+
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -78,7 +82,9 @@ body {
 
 .title {
   margin: 0;
+  padding: 50px 0 50px 0;
   color: $text-title-color;
+  text-transform: uppercase;
 
   &:after {
     display: block;
@@ -91,38 +97,84 @@ body {
 
 .mean {
   width: 100%;
-  min-height: 500px;
-
-  h2 {
-    padding: 100px 0 50px 0;
-  }
+  min-height: 400px;
 
   ul {
     list-style: none;
+
+    li {
+      float: left;
+      width: 33.3%
+      box-sizing: border-box;
+
+      i {
+        font-size: 40px;
+      }
+
+      h4 {
+        margin: 5px 0 20px 0;
+        font-weight: bold;
+      }
+
+      p {
+        color: $text-grey-color;
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
   }
 
-  li {
-    float: left;
-    width: 33.3%
-    box-sizing: border-box;
+}
 
-    i {
-      font-size: 40px;
-    }
+.samples {
+  background-color: $bg-grey-dark-color;
+  min-height: 1200px;
 
-    h4 {
-      margin: 5px 0 20px 0;
-      font-weight: bold;
-    }
+  .sample {
+    margin-bottom: 50px;
 
-    p {
-      color: $text-grey-color;
-      width: 60%;
-      margin: 0 auto;
+    ul {
+      list-style: none;
+
+      li {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+
+        h4{
+          text-align: left;
+          margin: 5px 0px 20px 30px;
+          font-weight: bold;
+        }
+
+        p {
+          color: $text-grey-color;
+          width: 90%;
+          margin: 10px auto;
+          text-align: left;
+        }
+
+        .thumb {
+          width: 100%;
+          height: 300px;
+          overflow: hidden;
+
+          img {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+      clearfix();
     }
   }
 
+  #week2 ul {
+    margin-left: 30px;
 
-
+    .thumb {
+      margin-left: -50px;
+    }
+  }
 }
 
