@@ -1,5 +1,29 @@
+$bg-color = #21C187;
+$text-white-color = white;
+
 body {
-  background-image: url("../images/hero.jpeg");
-  background-attachment: fixed;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-header {
+  background-color: $bg-color;
+  text-align: left;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+      color: $text-white-color;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
 }
 
