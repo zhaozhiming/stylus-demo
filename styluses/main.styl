@@ -1,22 +1,27 @@
 $bg-color = #21C187;
 $text-white-color = white;
+$text-grey-color = #7B7D7E;
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
+  color: $text-white-color;
   text-align: center;
+  width: 100%;
 }
 
 .nav-header {
   background-color: $bg-color;
   text-align: left;
+  position: relative;
+  z-index: 1;
 
   ul {
+    margin: 0;
     list-style: none;
 
     li {
       display: inline;
-      color: $text-white-color;
 
       &:hover {
         text-decoration: underline;
@@ -24,6 +29,43 @@ body {
       }
     }
   }
+}
 
+.logo {
+  width: 100%;
+  min-height: 500px;
+  background-color: #333333;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    background-image: url('../images/hero.jpeg');
+    background-size: cover;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 150px 0 10px 0;
+    font-size: 60px;
+  }
+
+  p {
+    max-width: 70%;
+    font-size: 15px;
+    font-weight: lighter;
+    color: $text-grey-color;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
 }
 
